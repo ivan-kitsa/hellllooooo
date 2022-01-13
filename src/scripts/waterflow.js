@@ -14,23 +14,9 @@ function generatorNodes() {
 }
 
 function waterflowNodes() {
-    const colors = schemesDefault
+    const colors = schemeDefault
     const nodes = document.querySelectorAll('.waterflow__block')
     const freeNodes = []
-
-    let windowW = window.innerWidth
-    let windowH = window.innerHeight
-
-    function resizeFix() {
-        let doIt = 0
-        window.addEventListener('resize', (e) => {
-            clearTimeout(doIt)
-            doIt = setTimeout(() => {
-                windowW = window.innerWidth
-                windowH = window.innerHeight
-            }, 100)
-        })
-    }
 
     function paramsGenerator() {
         const params = {
@@ -42,7 +28,7 @@ function waterflowNodes() {
         }
         params.scale = getRandomInt(2, 5) * 0.1 + getRandomInt(1, 5) * .1
         params.duration = getRandomInt(5, 12) * getRandomInt(8, 10) * .1
-        params.left = getRandomInt(3, 5) * getRandomInt(1, 7) * .01 * windowW
+        params.left = getRandomInt(3, 5) * getRandomInt(1, 7) * .01 * windowSizes.w
         params.delay = getRandomInt(10, 150) * .1
         params.color = getRandomInt(0, 4)
         params.radius = getRandomInt(10, 70)
@@ -62,7 +48,7 @@ function waterflowNodes() {
             borderRadius: params.radius
         }
         this.to = {
-            y: windowH + 200,
+            y: windowSizes.h + 200,
             duration: params.duration,
             delay: params.scale * params.delay,
             ease: 'linear'
@@ -88,7 +74,6 @@ function waterflowNodes() {
             waterflowAnim(n)
         })
         loop()
-        resizeFix()
     }
 
     initWaterflow()

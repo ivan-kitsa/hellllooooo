@@ -5,7 +5,25 @@ const schemes = {
     4: ['#2274A5', '#E7EB90', '#FADF63', '#E6AF2E', '#632B30'],
     5: ['#A4036F', '#048BA8', '#16DB93', '#EFEA5A', '#F29E4C'],
 }
-const schemesDefault = schemes[1]
+const schemeDefault = schemes[1]
+
+const windowSizes = {
+    w: window.innerWidth,
+    h: window.innerHeight,
+}
+
+function resizeFix() {
+    let doIt = 0
+
+    window.addEventListener('resize', () => {
+        clearTimeout(doIt)
+        doIt = setTimeout(() => {
+            windowSizes.w = window.innerWidth
+            windowSizes.h = window.innerHeight
+            cursorController()
+        }, 100)
+    }, false)
+}
 
 function getRandomInt(min, max) {
     const rand = min + Math.random() * (max + 1 - min)
@@ -31,6 +49,7 @@ function cursorController() {
         return
     }
 
+    const isTouch = getDeviceType() === 'tablet' || getDeviceType() === 'mobile'
     const cursorPos = {x: 0, y: 0}
     const nodeH = node.offsetHeight
     const nodeW = node.offsetWidth
@@ -38,27 +57,26 @@ function cursorController() {
     window.addEventListener('mousemove', (e) => {
         cursorPos.x = e.pageX
         cursorPos.y = e.pageY
-
         node.style.cssText += `
-            visibility: visible;
+            visibility: ${isTouch ? 'hidden' : 'visible'};
             top: calc(${cursorPos.y}px - ${nodeH / 2}px);
             left: calc(${cursorPos.x}px - ${nodeW / 2}px);`
-    })
-    window.addEventListener('mouseout', () => {
+    }, false)
+
+    function mouseOut() {
         node.style.cssText = 'visibility: hidden;'
-    })
-    window.addEventListener('mousedown', () => {
+    }
+    function mouseDown() {
         tl.to(node, {
             scale: 1.5,
             duration: .15,
-
         })
         tl.to(node.children[0], {
             scale: 1.5,
             duration: .15,
         })
-    })
-    window.addEventListener('mouseup', () => {
+    }
+    function mouseUp() {
         tl.to(node, {
             scale: 1,
             duration: .15
@@ -67,11 +85,21 @@ function cursorController() {
             scale: .5,
             duration: .15
         })
+    }
 
-    })
+    if (isTouch) {
+        window.removeEventListener('mouseout', mouseOut, false)
+        window.removeEventListener('mousedown', mouseDown, false)
+        window.removeEventListener('mouseup', mouseUp, false)
+        return
+    }
+
+    window.addEventListener('mouseout', mouseOut, false)
+    window.addEventListener('mousedown', mouseDown, false)
+    window.addEventListener('mouseup', mouseUp, false)
 }
 
+resizeFix()
 cursorController()
-
 
 

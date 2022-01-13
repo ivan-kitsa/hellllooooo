@@ -17,6 +17,19 @@ function destroyMe() {
     let isPressed = false
     let colors = schemes[getRandomInt(1, 5)]
 
+    function hidePopup(event) {
+        if (!isPressed && event.target.className === 'destroy__grid--box' || event.target.className === 'destroy__grid') {
+            settingsPopup.classList.add('hidden')
+            isPressed = true
+        }
+    }
+    function visiblePopup() {
+        if (isPressed) {
+            settingsPopup.classList.remove('hidden')
+            isPressed = false
+        }
+    }
+
     function destroyInit() {
         rowsInput.value = gridParams.rows
         rowsInput.oninput = onInput
@@ -40,21 +53,12 @@ function destroyMe() {
         }
 
         gridGenerator(grid, gridParams)
+
+        window.addEventListener('mousedown', hidePopup)
+        window.addEventListener('mouseup', visiblePopup)
+        window.addEventListener('touchstart', hidePopup)
+        window.addEventListener('touchend', visiblePopup)
     }
-
-    document.addEventListener('mousedown', (event) => {
-        if (!isPressed && event.target.className === 'destroy__grid--box' || event.target.className === 'destroy__grid') {
-            settingsPopup.classList.add('hidden')
-            isPressed = true
-        }
-    })
-    document.addEventListener('mouseup', (event) => {
-        if (isPressed) {
-            settingsPopup.classList.remove('hidden')
-            isPressed = false
-        }
-    })
-
 
     function gridGenerator(wrapper, gridParams) {
         const rows = gridParams.rows
@@ -98,7 +102,7 @@ function destroyMe() {
 
             const div = document.createElement('div')
             div.className = 'destroy__grid--box'
-            div.onmousedown = (columns * rows > 0) ? destroyBox : null
+            div.onmousedown = (columns * rows > 0) ? (e) => destroyBox(e.target) : null
             /* div.style.cssText = `
               position: absolute;
               left: calc(${widthBox * (numberOfColumn - 1)}px);
@@ -108,42 +112,44 @@ function destroyMe() {
             wrapper.append(div)
         }
 
-        document.addEventListener('mouseover', (event) => {
-            if (event.target.className === 'destroy__grid--box' && isPressed) {
-                destroyBox(event)
+        document.addEventListener('mouseover', (e) => {
+            if (e.target.className === 'destroy__grid--box' && isPressed) {
+                destroyBox(e.target)
             }
+        })
+        document.addEventListener('touchmove', (e) => {
+            const x = e.changedTouches[0].pageX
+            const y = e.changedTouches[0].pageY
+            const node = document.elementFromPoint(x, y)
+
+            if (!node || !node.className.includes('destroy__grid--box')) {
+                return
+            }
+            destroyBox(node)
         })
 
         colors = schemes[getRandomInt(1, 5)]
     }
 
-    function destroyBox(e) { // TODO rewrite to GSAP
+    function destroyBox(node) {
         if (reloadButton.classList.contains('hidden')){
-            reloadButton.classList.remove('hidden')
+            reloadButton.classList.toggle('hidden')
         }
 
-        e.target.style.cssText += `
+        node.style.cssText += `
 		background-color: ${colors[getRandomInt(0, 4)]};
         box-shadow: 0px 0px 200px 10px ${colors[getRandomInt(0, 4)]};
 		pointer-events: none;`
 
         setTimeout(() => {
-            e.target.style.cssText += `
+            node.style.cssText += `
           transform:
           translateY(calc(100vh + 100%))
           translateX(${getRandomInt(-25, 0) + getRandomInt(0 ,25)}vw);
           transition: 1s ease-in 0s;
           pointer-events: none;`
         }, 100)
-
-        /* garbageCleaner(e.target) */
     }
-
-    /* function garbageCleaner(node) {
-      setTimeout(() => {
-        node.remove()
-      }, 1100)
-    } */
 
     function onBlur(e) {
         const input = e.target

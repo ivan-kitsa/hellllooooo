@@ -39,6 +39,9 @@ body, main {
   z-index: 100;
   pointer-events: none;
 
+  //@media (hover: none) {
+  //}
+
   &.move-circle {
     visibility: visible;
     transform: scale(0);
@@ -186,7 +189,9 @@ body, main {
   }
 }
 
+
 /// DESTROYER PAGE ///
+
 .destroy {
   &__wrapper {
     @include fullSize;
@@ -229,7 +234,7 @@ body, main {
     justify-content: center;
     transition: 0.15s ease-in-out 0.1s;
 
-    .hidden {
+    &.hidden {
       pointer-events: none;
       opacity: 0;
     }
