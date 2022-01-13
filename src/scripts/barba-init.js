@@ -21,7 +21,7 @@ function cursorOver(node) {
     }, {
         scale: 200,
         duration: .5,
-        ease: 'linear'
+        ease: Cubic.easeIn
     })
 }
 

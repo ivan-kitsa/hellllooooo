@@ -5,7 +5,7 @@ function destroyMe() {
     }
 
     const grid = document.getElementById('grid-wrapper')
-    const settingsPopup =  document.querySelector('.destroy--popup')
+    const settingsPopup =  document.querySelector('.destroy__popup')
     const rowsInput = document.getElementById('rows')
     const columnsInput = document.getElementById('columns')
     const reloadButton = document.getElementById('reload')
@@ -43,7 +43,7 @@ function destroyMe() {
     }
 
     document.addEventListener('mousedown', (event) => {
-        if (!isPressed && event.target.className === 'grid-box' || event.target.className === 'destroy--grid') {
+        if (!isPressed && event.target.className === 'destroy__grid--box' || event.target.className === 'destroy__grid') {
             settingsPopup.classList.add('hidden')
             isPressed = true
         }
@@ -97,7 +97,7 @@ function destroyMe() {
                 const numberOfColumn = tik   */
 
             const div = document.createElement('div')
-            div.className = 'grid-box'
+            div.className = 'destroy__grid--box'
             div.onmousedown = (columns * rows > 0) ? destroyBox : null
             /* div.style.cssText = `
               position: absolute;
@@ -109,7 +109,7 @@ function destroyMe() {
         }
 
         document.addEventListener('mouseover', (event) => {
-            if (event.target.className === 'grid-box' && isPressed) {
+            if (event.target.className === 'destroy__grid--box' && isPressed) {
                 destroyBox(event)
             }
         })

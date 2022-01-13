@@ -1,5 +1,5 @@
 function generatorNodes() {
-    const wrapper = document.querySelector(".waterflow--grid")
+    const wrapper = document.querySelector(".waterflow__grid")
 
     if (!wrapper) {
         return
@@ -7,15 +7,15 @@ function generatorNodes() {
 
     for (let i = 0; i < 50; i++) {
         const node = document.createElement('a')
-        node.className = 'waterflow--block'
+        node.className = 'waterflow__block'
         node.href='./destroy.html'
         wrapper.appendChild(node)
     }
 }
 
 function waterflowNodes() {
-    const colors =  schemesDefault
-    const nodes = document.querySelectorAll('.waterflow--block')
+    const colors = schemesDefault
+    const nodes = document.querySelectorAll('.waterflow__block')
     const freeNodes = []
 
     let windowW = window.innerWidth
@@ -28,7 +28,7 @@ function waterflowNodes() {
             doIt = setTimeout(() => {
                 windowW = window.innerWidth
                 windowH = window.innerHeight
-            }, 200)
+            }, 100)
         })
     }
 
@@ -56,25 +56,20 @@ function waterflowNodes() {
         this.from = {
             scale: params.scale,
             y: -200,
-            left: params.left,
+            x: params.left,
+            // rotate: params.delay * params.radius * params.left,
             background: colors[params.color],
             borderRadius: params.radius
         }
         this.to = {
             y: windowH + 200,
             duration: params.duration,
-            delay: params.delay,
+            delay: params.scale * params.delay,
             ease: 'linear'
         }
 
         tl.fromTo(node, this.from, this.to).then(() => {
             freeNodes.push(node)
-        })
-    }
-
-    function initWaterflow() {
-        nodes.forEach(n => {
-            waterflowAnim(n)
         })
     }
 
@@ -88,10 +83,15 @@ function waterflowNodes() {
         }, 100)
     }
 
-    resizeFix()
-    initWaterflow()
-    loop()
+    function initWaterflow() {
+        nodes.forEach(n => {
+            waterflowAnim(n)
+        })
+        loop()
+        resizeFix()
+    }
 
+    initWaterflow()
 }
 
 generatorNodes()
