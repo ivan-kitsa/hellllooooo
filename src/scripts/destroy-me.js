@@ -167,7 +167,7 @@ function destroyMe() {
             return
         }
 
-        if (+count > 100) {
+        if (+count > 50) {
             gridParams[input.id] = prevCount
             input.value = prevCount
             gridGenerator(grid, gridParams)
