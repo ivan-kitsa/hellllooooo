@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport'
+          content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Destroy me!</title>
+    <link rel='stylesheet' href='./styles/styles.css'>
+</head>
+<body data-barba="wrapper">
+
+<script src="./scripts/libs/gsap.js"></script>
+<script src="./scripts/libs/barba.js"></script>
+<script src="./scripts/libs/barba-router.js"></script>
+
+<main data-barba="container" data-barba-namespace="destroy">
+    <div class='destroy--wrapper'>
+        <div class='destroy--grid' id='grid-wrapper'></div>
+        <div class='destroy--popup'>
+            <p class='hidden' id='reload'>&#11119;</p>
+            <label for='rows'>
+                <span>Set rows count:</span>
+                <input type='text' id='rows'>
+            </label>
+            <label for='columns'>
+                <span>Set columns count:</span>
+                <input type='text' id='columns'>
+            </label>
+        </div>
+    </div>
+    <div class='move-circle'></div>
+</main>
+
+<div class='cursor' id='cursor'>
+    <div class='back'></div>
+</div>
+
+<script src="./scripts/barba-init.js"></script>
+<script src="./scripts/scripts.js"></script>
+<script src="./scripts/waterflow.js"></script>
+<script src="./scripts/destroy-me.js"></script>
+</body>
+</html>

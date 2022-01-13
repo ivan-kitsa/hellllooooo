@@ -1,0 +1,293 @@
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  position: relative;
+  cursor: none !important;
+  user-select: none;
+}
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+ol, ul {
+  list-style: none;
+}
+body, main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+  font-family: Arial, 'sans-serif';
+}
+
+.cursor, .move-circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  z-index: 100;
+  pointer-events: none;
+
+  &.move-circle {
+    visibility: visible;
+    transform: scale(0);
+    background: paleturquoise;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &:after, .back {
+    content: '';
+    @include fullSize;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    background: fade-out(skyblue, .5);
+  }
+
+  .back {
+    transform: scale(.5);
+    background: paleturquoise;
+    z-index: 0;
+  }
+}
+
+
+/// WATERFLOW PAGE ///
+
+@keyframes rotate {
+  from {
+    transform: rotate(0) translate(-50%, -50%);
+  }
+  to {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+
+@keyframes noise-anim {
+  $steps: 15;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+    }
+  }
+}
+
+@keyframes noise-anim-2 {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+    }
+  }
+}
+
+.waterflow {
+  &--wrapper {
+    @include fullSize;
+    background: #001;
+    overflow: hidden;
+  }
+  &--grid {
+    @include fullSize;
+  }
+  &--block {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+
+    &:hover:after {
+      //background: inherit;
+      transform: scale(.9);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+      background: #001;
+      border-radius: inherit;
+      transition: .15s cubic-bezier(0,.58,.85,.69);
+    }
+  }
+}
+
+.glitch {
+  width: max-content;
+
+  &--text {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: max-content;
+    font-size: 120px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #FFF;
+    text-shadow: 1px -1px #FD8853;
+  }
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -3px 0 #FD8853;
+    top: 0;
+    color: #001;
+    background: #001;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 3px 0 #34A997;
+    top: 0;
+    color: #001;
+    background: #001;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim-2 3s infinite linear alternate-reverse;
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+/// DESTROYER PAGE ///
+.destroy {
+  &--wrapper {
+    @include fullSize;
+    background: #111;
+  }
+
+  &--grid {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-gap: 0;
+    cursor: crosshair;
+
+    .grid-box {
+      border: 1px solid fade-out(gray, .9);
+      background: rgba(0,0,0, .9);
+      transition: .4s cubic-bezier(.4,.15,0,1.15) .1s;
+      box-shadow: none;
+
+      &:hover {
+        background: rgba(0,0,0, .25);
+        transition: .0s cubic-bezier(.4,.15,0,1.15) 0s;
+        box-shadow: 0px 0px 41px 14px rgba(255,255,255, .015);
+        z-index: 2;
+      }
+    }
+  }
+
+  &--popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.15s ease-in-out 0.1s;
+
+
+    &.hidden {
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    #reload {
+      font-size: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 105%;
+      top: 38%;
+      transform: rotate(0);
+      color: lightgray;
+      cursor: pointer;
+      pointer-events: auto;
+      transition: .1s cubic-bezier(.4,.15,0,1.15) .25s;
+
+      &:active {
+        transform: rotate(-45deg);
+        transition: .1s ease-in-out 0s;
+      }
+
+      &.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+
+    label{
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+    }
+
+    span {
+      width: 180px;
+      color: lightgray;
+      text-align: right;
+      margin-right: 24px;
+
+      &:after {
+        content: 'range: 1 - 100';
+        position: absolute;
+        right: 5px;
+        bottom: 0;
+        font-size: 12px;
+        color: gray;
+      }
+    }
+
+    input {
+      width: 48px;
+      background: darkgray;
+      border: 1px solid gray;
+      border-radius: 4px;
+      padding: 8px;
+      text-align: center;
+      pointer-events: auto;
+    }
+  }
+}
+
+// Remove shadows for Safari //
+input:not([type=checkbox]):not([type=radio]),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
