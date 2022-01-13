@@ -117,7 +117,7 @@ function destroyMe() {
         colors = schemes[getRandomInt(1, 5)]
     }
 
-    function destroyBox(e) {
+    function destroyBox(e) { // TODO rewrite to GSAP
         if (reloadButton.classList.contains('hidden')){
             reloadButton.classList.remove('hidden')
         }
