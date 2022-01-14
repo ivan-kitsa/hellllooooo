@@ -17,17 +17,33 @@ function destroyMe() {
     let isPressed = false
     let colors = schemes[getRandomInt(1, 5)]
 
-    function hidePopup(event) {
+    const  hidePopup = (event) => {
         if (!isPressed && event.target.className === 'destroy__grid--box' || event.target.className === 'destroy__grid') {
             settingsPopup.classList.add('hidden')
             isPressed = true
         }
     }
-    function visiblePopup() {
+    const visiblePopup = () => {
         if (isPressed) {
             settingsPopup.classList.remove('hidden')
             isPressed = false
         }
+    }
+
+    const destroyMouseMove = (e) => {
+        if (e.target.className === 'destroy__grid--box' && isPressed) {
+            destroyBox(e.target)
+        }
+    }
+    const destroyTouchMove = (e) => {
+        const x = e.changedTouches[0].pageX
+        const y = e.changedTouches[0].pageY
+        const node = document.elementFromPoint(x, y)
+
+        if (!node || !node.className.includes('destroy__grid--box')) {
+            return
+        }
+        destroyBox(node)
     }
 
     function destroyInit() {
@@ -53,11 +69,41 @@ function destroyMe() {
         }
 
         gridGenerator(grid, gridParams)
+        listenersController()
+        resizeFix(listenersController, 100)
+    }
 
-        window.addEventListener('mousedown', hidePopup)
-        window.addEventListener('mouseup', visiblePopup)
-        window.addEventListener('touchstart', hidePopup)
-        window.addEventListener('touchend', visiblePopup)
+    function listenersController() {
+        function addTouchListeners() {
+            grid.addEventListener('touchstart', hidePopup, false)
+            grid.addEventListener('touchend', visiblePopup, false)
+            grid.addEventListener('touchmove', destroyTouchMove, false)
+        }
+        function removeTouchListeners() {
+            grid.removeEventListener('touchstart', hidePopup, false)
+            grid.removeEventListener('touchend', visiblePopup, false)
+            grid.removeEventListener('touchmove', destroyTouchMove, false)
+        }
+        function addMouseListeners() {
+            grid.addEventListener('mousedown', hidePopup, false)
+            grid.addEventListener('mouseup', visiblePopup, false)
+            grid.addEventListener('mouseover', destroyMouseMove,false)
+        }
+        function removeMouseListeners() {
+            grid.removeEventListener('mousedown', hidePopup, false)
+            grid.removeEventListener('mouseup', visiblePopup, false)
+            grid.removeEventListener('mouseover', destroyMouseMove, false)
+        }
+
+        removeTouchListeners()
+        removeMouseListeners()
+
+        if (getDeviceType() === 'tablet' || getDeviceType() === 'mobile') {
+            addTouchListeners()
+            return
+        }
+
+        addMouseListeners()
     }
 
     function gridGenerator(wrapper, gridParams) {
@@ -111,22 +157,6 @@ function destroyMe() {
               height: ${frameHeight / gridParams.rows}px;` */
             wrapper.append(div)
         }
-
-        document.addEventListener('mouseover', (e) => {
-            if (e.target.className === 'destroy__grid--box' && isPressed) {
-                destroyBox(e.target)
-            }
-        })
-        document.addEventListener('touchmove', (e) => {
-            const x = e.changedTouches[0].pageX
-            const y = e.changedTouches[0].pageY
-            const node = document.elementFromPoint(x, y)
-
-            if (!node || !node.className.includes('destroy__grid--box')) {
-                return
-            }
-            destroyBox(node)
-        })
 
         colors = schemes[getRandomInt(1, 5)]
     }

@@ -12,16 +12,13 @@ const windowSizes = {
     h: window.innerHeight,
 }
 
-function resizeFix() {
+function resizeFix(func, delay = 100) {
     let doIt = 0
-
     window.addEventListener('resize', () => {
         clearTimeout(doIt)
-        doIt = setTimeout(() => {
-            windowSizes.w = window.innerWidth
-            windowSizes.h = window.innerHeight
-            cursorController()
-        }, 100)
+        doIt = setTimeout(func, delay)
+        windowSizes.w = window.innerWidth
+        windowSizes.h = window.innerHeight
     }, false)
 }
 
@@ -30,7 +27,7 @@ function getRandomInt(min, max) {
     return Math.floor(rand);
 }
 
-const getDeviceType = () => {
+function getDeviceType() {
     const ua = navigator.userAgent
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
         return 'tablet'
@@ -41,65 +38,97 @@ const getDeviceType = () => {
     return 'desktop'
 }
 
-function cursorController() {
-    const node = document.getElementById('cursor')
-    const tl = gsap.timeline()
-
-    if (!node || !tl) {
-        return
+class CursorController {
+    constructor() {
+        this.cursorPos = {x: 0, y: 0}
+        this.node = document.getElementById('cursor')
+        this.nodeH = this.node.offsetHeight
+        this.nodeW = this.node.offsetWidth
+        this.tl = gsap.timeline()
     }
 
-    const isTouch = getDeviceType() === 'tablet' || getDeviceType() === 'mobile'
-    const cursorPos = {x: 0, y: 0}
-    const nodeH = node.offsetHeight
-    const nodeW = node.offsetWidth
-
-    window.addEventListener('mousemove', (e) => {
-        cursorPos.x = e.pageX
-        cursorPos.y = e.pageY
-        node.style.cssText += `
-            visibility: ${isTouch ? 'hidden' : 'visible'};
-            top: calc(${cursorPos.y}px - ${nodeH / 2}px);
-            left: calc(${cursorPos.x}px - ${nodeW / 2}px);`
-    }, false)
-
-    function mouseOut() {
-        node.style.cssText = 'visibility: hidden;'
+    #touch = (e) => {
+        this.cursorPos.x = e.changedTouches[0].pageX
+        this.cursorPos.y = e.changedTouches[0].pageY
+        this.node.style.cssText = `
+            visibility: hidden;
+            top: calc(${this.cursorPos.y}px - ${this.nodeH / 2}px);
+            left: calc(${this.cursorPos.x}px - ${this.nodeW / 2}px);`
     }
-    function mouseDown() {
-        tl.to(node, {
+    #mouseMove = (e) => {
+        this.cursorPos.x = e.pageX
+        this.cursorPos.y = e.pageY
+        this.node.style.cssText = `
+            visibility: visible;
+            top: calc(${this.cursorPos.y}px - ${this.nodeH / 2}px);
+            left: calc(${this.cursorPos.x}px - ${this.nodeW / 2}px);`
+    }
+    #mouseOut = () => {
+        this.node.style.cssText = 'visibility: hidden;'
+    }
+    #mouseDown = () => {
+        this.tl.to(this.node, {
             scale: 1.5,
             duration: .15,
         })
-        tl.to(node.children[0], {
+        this.tl.to(this.node.children[0], {
             scale: 1.5,
             duration: .15,
         })
     }
-    function mouseUp() {
-        tl.to(node, {
+    #mouseUp = () => {
+        this.tl.to(this.node, {
             scale: 1,
             duration: .15
         })
-        tl.to(node.children[0], {
+        this.tl.to(this.node.children[0], {
             scale: .5,
             duration: .15
         })
     }
 
-    if (isTouch) {
-        window.removeEventListener('mouseout', mouseOut, false)
-        window.removeEventListener('mousedown', mouseDown, false)
-        window.removeEventListener('mouseup', mouseUp, false)
-        return
+    addMouseListeners() {
+        window.addEventListener('mousemove', this.#mouseMove, false)
+        window.addEventListener('mouseout', this.#mouseOut, false)
+        window.addEventListener('mousedown', this.#mouseDown, false)
+        window.addEventListener('mouseup', this.#mouseUp, false)
+    }
+    removeMouseListeners() {
+        window.removeEventListener('mousemove', this.#mouseMove, false)
+        window.removeEventListener('mouseout', this.#mouseOut, false)
+        window.removeEventListener('mousedown', this.#mouseDown, false)
+        window.removeEventListener('mouseup', this.#mouseUp, false)
     }
 
-    window.addEventListener('mouseout', mouseOut, false)
-    window.addEventListener('mousedown', mouseDown, false)
-    window.addEventListener('mouseup', mouseUp, false)
+    addTouchListeners() {
+        window.addEventListener('touchstart', this.#touch, false)
+        window.addEventListener('touchend', this.#touch, false)
+    }
+    removeTouchListeners() {
+        window.removeEventListener('touchstart', this.#touch, false)
+        window.removeEventListener('touchend', this.#touch, false)
+    }
+
+    #listenersController() {
+        if (!this.node || !this.tl) {
+            console.warn('Node #cursor not founded')
+            return
+        }
+        this.removeMouseListeners()
+        this.removeTouchListeners()
+
+        if (getDeviceType() === 'tablet' || getDeviceType() === 'mobile') {
+            this.addTouchListeners()
+            return
+        }
+
+        this.addMouseListeners()
+    }
+
+    init() {
+        this.#listenersController()
+        resizeFix(() => this.#listenersController())
+    }
 }
 
-resizeFix()
-cursorController()
-
-
+new CursorController().init()
