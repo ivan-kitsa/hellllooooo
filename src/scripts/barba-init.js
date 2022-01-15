@@ -52,6 +52,8 @@ barba.init({
                     break
                 case 'destroy':
                     break
+                case 'colors':
+                    break
                 default:
                     break
             }
@@ -66,6 +68,9 @@ barba.init({
                     break
                 case 'destroy':
                     await destroyMe()
+                    break
+                case 'colors':
+                    await colorsInit()
                     break
                 default:
                     break

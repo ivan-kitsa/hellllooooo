@@ -6,9 +6,8 @@ function generatorNodes() {
     }
 
     for (let i = 0; i < 50; i++) {
-        const node = document.createElement('a')
+        const node = document.createElement('div')
         node.className = 'waterflow__block'
-        node.href='./destroy.html'
         wrapper.appendChild(node)
     }
 }

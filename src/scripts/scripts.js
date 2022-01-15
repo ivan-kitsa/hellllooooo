@@ -132,3 +132,18 @@ class CursorController {
 }
 
 new CursorController().init()
+
+function colorsInit() {
+    const section = document.querySelector('.colors__wrapper')
+    const spanCollection = document.querySelectorAll('span')
+
+    section.addEventListener('mousemove', function(event) {
+        const x = event.pageX;
+        const y = event.pageY;
+
+        for (let i = 0; i < spanCollection.length; i++) {
+            spanCollection[i].style.cssText = `background-position: ${x - 100}px ${y - 100}px`
+        }
+    })
+}
+colorsInit()
