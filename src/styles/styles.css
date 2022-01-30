@@ -81,159 +81,159 @@ body, main {
 
 @-webkit-keyframes noise-anim {
   0% {
-    clip: rect(17px, 9999px, 18px, 0); }
+    clip: rect(26px, 9999px, 59px, 0); }
   6.66667% {
-    clip: rect(54px, 9999px, 65px, 0); }
+    clip: rect(16px, 9999px, 42px, 0); }
   13.33333% {
-    clip: rect(11px, 9999px, 77px, 0); }
+    clip: rect(9px, 9999px, 15px, 0); }
   20% {
-    clip: rect(19px, 9999px, 53px, 0); }
+    clip: rect(44px, 9999px, 70px, 0); }
   26.66667% {
-    clip: rect(80px, 9999px, 6px, 0); }
+    clip: rect(59px, 9999px, 64px, 0); }
   33.33333% {
-    clip: rect(33px, 9999px, 64px, 0); }
+    clip: rect(59px, 9999px, 58px, 0); }
   40% {
-    clip: rect(75px, 9999px, 46px, 0); }
+    clip: rect(82px, 9999px, 48px, 0); }
   46.66667% {
-    clip: rect(44px, 9999px, 56px, 0); }
+    clip: rect(40px, 9999px, 80px, 0); }
   53.33333% {
-    clip: rect(71px, 9999px, 3px, 0); }
+    clip: rect(91px, 9999px, 41px, 0); }
   60% {
-    clip: rect(48px, 9999px, 43px, 0); }
+    clip: rect(32px, 9999px, 70px, 0); }
   66.66667% {
-    clip: rect(35px, 9999px, 100px, 0); }
+    clip: rect(21px, 9999px, 56px, 0); }
   73.33333% {
-    clip: rect(41px, 9999px, 89px, 0); }
+    clip: rect(22px, 9999px, 13px, 0); }
   80% {
-    clip: rect(59px, 9999px, 5px, 0); }
+    clip: rect(16px, 9999px, 80px, 0); }
   86.66667% {
-    clip: rect(30px, 9999px, 95px, 0); }
+    clip: rect(53px, 9999px, 26px, 0); }
   93.33333% {
-    clip: rect(50px, 9999px, 91px, 0); }
+    clip: rect(33px, 9999px, 14px, 0); }
   100% {
-    clip: rect(83px, 9999px, 82px, 0); } }
+    clip: rect(50px, 9999px, 33px, 0); } }
 
 @keyframes noise-anim {
   0% {
-    clip: rect(17px, 9999px, 18px, 0); }
+    clip: rect(26px, 9999px, 59px, 0); }
   6.66667% {
-    clip: rect(54px, 9999px, 65px, 0); }
+    clip: rect(16px, 9999px, 42px, 0); }
   13.33333% {
-    clip: rect(11px, 9999px, 77px, 0); }
+    clip: rect(9px, 9999px, 15px, 0); }
   20% {
-    clip: rect(19px, 9999px, 53px, 0); }
+    clip: rect(44px, 9999px, 70px, 0); }
   26.66667% {
-    clip: rect(80px, 9999px, 6px, 0); }
+    clip: rect(59px, 9999px, 64px, 0); }
   33.33333% {
-    clip: rect(33px, 9999px, 64px, 0); }
+    clip: rect(59px, 9999px, 58px, 0); }
   40% {
-    clip: rect(75px, 9999px, 46px, 0); }
+    clip: rect(82px, 9999px, 48px, 0); }
   46.66667% {
-    clip: rect(44px, 9999px, 56px, 0); }
+    clip: rect(40px, 9999px, 80px, 0); }
   53.33333% {
-    clip: rect(71px, 9999px, 3px, 0); }
+    clip: rect(91px, 9999px, 41px, 0); }
   60% {
-    clip: rect(48px, 9999px, 43px, 0); }
+    clip: rect(32px, 9999px, 70px, 0); }
   66.66667% {
-    clip: rect(35px, 9999px, 100px, 0); }
+    clip: rect(21px, 9999px, 56px, 0); }
   73.33333% {
-    clip: rect(41px, 9999px, 89px, 0); }
+    clip: rect(22px, 9999px, 13px, 0); }
   80% {
-    clip: rect(59px, 9999px, 5px, 0); }
+    clip: rect(16px, 9999px, 80px, 0); }
   86.66667% {
-    clip: rect(30px, 9999px, 95px, 0); }
+    clip: rect(53px, 9999px, 26px, 0); }
   93.33333% {
-    clip: rect(50px, 9999px, 91px, 0); }
+    clip: rect(33px, 9999px, 14px, 0); }
   100% {
-    clip: rect(83px, 9999px, 82px, 0); } }
+    clip: rect(50px, 9999px, 33px, 0); } }
 
 @-webkit-keyframes noise-anim-2 {
   0% {
-    clip: rect(25px, 9999px, 86px, 0); }
+    clip: rect(93px, 9999px, 91px, 0); }
   5% {
-    clip: rect(59px, 9999px, 77px, 0); }
+    clip: rect(92px, 9999px, 29px, 0); }
   10% {
-    clip: rect(16px, 9999px, 83px, 0); }
+    clip: rect(44px, 9999px, 65px, 0); }
   15% {
-    clip: rect(82px, 9999px, 7px, 0); }
+    clip: rect(74px, 9999px, 73px, 0); }
   20% {
-    clip: rect(19px, 9999px, 37px, 0); }
+    clip: rect(17px, 9999px, 16px, 0); }
   25% {
-    clip: rect(86px, 9999px, 38px, 0); }
+    clip: rect(79px, 9999px, 34px, 0); }
   30% {
-    clip: rect(78px, 9999px, 21px, 0); }
+    clip: rect(2px, 9999px, 32px, 0); }
   35% {
-    clip: rect(72px, 9999px, 16px, 0); }
+    clip: rect(20px, 9999px, 75px, 0); }
   40% {
-    clip: rect(72px, 9999px, 45px, 0); }
+    clip: rect(75px, 9999px, 79px, 0); }
   45% {
-    clip: rect(14px, 9999px, 27px, 0); }
+    clip: rect(100px, 9999px, 91px, 0); }
   50% {
-    clip: rect(69px, 9999px, 80px, 0); }
+    clip: rect(18px, 9999px, 59px, 0); }
   55% {
-    clip: rect(98px, 9999px, 30px, 0); }
+    clip: rect(39px, 9999px, 52px, 0); }
   60% {
-    clip: rect(90px, 9999px, 56px, 0); }
+    clip: rect(3px, 9999px, 76px, 0); }
   65% {
-    clip: rect(71px, 9999px, 33px, 0); }
+    clip: rect(28px, 9999px, 24px, 0); }
   70% {
-    clip: rect(82px, 9999px, 70px, 0); }
+    clip: rect(30px, 9999px, 17px, 0); }
   75% {
-    clip: rect(50px, 9999px, 86px, 0); }
+    clip: rect(27px, 9999px, 58px, 0); }
   80% {
-    clip: rect(31px, 9999px, 79px, 0); }
+    clip: rect(12px, 9999px, 13px, 0); }
   85% {
-    clip: rect(95px, 9999px, 23px, 0); }
+    clip: rect(54px, 9999px, 81px, 0); }
   90% {
-    clip: rect(14px, 9999px, 39px, 0); }
+    clip: rect(91px, 9999px, 21px, 0); }
   95% {
-    clip: rect(47px, 9999px, 56px, 0); }
+    clip: rect(94px, 9999px, 65px, 0); }
   100% {
-    clip: rect(84px, 9999px, 49px, 0); } }
+    clip: rect(48px, 9999px, 43px, 0); } }
 
 @keyframes noise-anim-2 {
   0% {
-    clip: rect(25px, 9999px, 86px, 0); }
+    clip: rect(93px, 9999px, 91px, 0); }
   5% {
-    clip: rect(59px, 9999px, 77px, 0); }
+    clip: rect(92px, 9999px, 29px, 0); }
   10% {
-    clip: rect(16px, 9999px, 83px, 0); }
+    clip: rect(44px, 9999px, 65px, 0); }
   15% {
-    clip: rect(82px, 9999px, 7px, 0); }
+    clip: rect(74px, 9999px, 73px, 0); }
   20% {
-    clip: rect(19px, 9999px, 37px, 0); }
+    clip: rect(17px, 9999px, 16px, 0); }
   25% {
-    clip: rect(86px, 9999px, 38px, 0); }
+    clip: rect(79px, 9999px, 34px, 0); }
   30% {
-    clip: rect(78px, 9999px, 21px, 0); }
+    clip: rect(2px, 9999px, 32px, 0); }
   35% {
-    clip: rect(72px, 9999px, 16px, 0); }
+    clip: rect(20px, 9999px, 75px, 0); }
   40% {
-    clip: rect(72px, 9999px, 45px, 0); }
+    clip: rect(75px, 9999px, 79px, 0); }
   45% {
-    clip: rect(14px, 9999px, 27px, 0); }
+    clip: rect(100px, 9999px, 91px, 0); }
   50% {
-    clip: rect(69px, 9999px, 80px, 0); }
+    clip: rect(18px, 9999px, 59px, 0); }
   55% {
-    clip: rect(98px, 9999px, 30px, 0); }
+    clip: rect(39px, 9999px, 52px, 0); }
   60% {
-    clip: rect(90px, 9999px, 56px, 0); }
+    clip: rect(3px, 9999px, 76px, 0); }
   65% {
-    clip: rect(71px, 9999px, 33px, 0); }
+    clip: rect(28px, 9999px, 24px, 0); }
   70% {
-    clip: rect(82px, 9999px, 70px, 0); }
+    clip: rect(30px, 9999px, 17px, 0); }
   75% {
-    clip: rect(50px, 9999px, 86px, 0); }
+    clip: rect(27px, 9999px, 58px, 0); }
   80% {
-    clip: rect(31px, 9999px, 79px, 0); }
+    clip: rect(12px, 9999px, 13px, 0); }
   85% {
-    clip: rect(95px, 9999px, 23px, 0); }
+    clip: rect(54px, 9999px, 81px, 0); }
   90% {
-    clip: rect(14px, 9999px, 39px, 0); }
+    clip: rect(91px, 9999px, 21px, 0); }
   95% {
-    clip: rect(47px, 9999px, 56px, 0); }
+    clip: rect(94px, 9999px, 65px, 0); }
   100% {
-    clip: rect(84px, 9999px, 49px, 0); } }
+    clip: rect(48px, 9999px, 43px, 0); } }
 
 .waterflow__wrapper {
   width: 100%;
@@ -521,6 +521,166 @@ body, main {
       background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAwLSURBVHgB7d1dchNnFsbxp9uWa+5GuZ2QxKwgygowK4CsIKYKMpWaC2AF2CuAXKSo4FSBVzCwAisrQFmBlcGZ21HuZpDVPe+Ruo0st777u/+/qljGOIBtPTrnvG9/eEImXup8P1Cr3ZI6odTelb4K5bVDhfvut9v2Mfs8b/LYnvPHDNznDaLP608evb6ncHAp/S4F/UDe4C+67D3Q7YGQOk/YigXB105H8vd35H3tAuDe177mP+mzYgHpuxC6/4LfAqlLcLZHQNb0Uh8OfHkd90p+Ry4M3iQMpWUVx4Wl54L7a6Cw94O+6AorIyBL/KSLjmuPXCh0z/3SqkPelSFtVlF6LjTvXJvW/Ydu9YS5CEgCqxJ78u6NpPtlrxDbsgrjHrpDBadUl5sISCQOhXtlPVT1q8RGCMtNjQ7Ia523L7X32M0ST9TQUMwTrZa9/ajhjz/odl8N1ciAWLXYlffMvXsgrKLrVsZOv9eXb9QwjQkI1WJ7kxWx0fFIo25TqkrtA0Iw0vdpVvl4XPeg1DYgBCMfLixv6hyU2gWEYBSjrkGpTUAIRvG88WEuevNInx+rJmoRkF/0r/uB/Od139SriniYr8OqV6UDYgcK7qr1WizXllIo7+1IH59Wue3yVVEn+uOZC8d7EY7SchuN993P6Nx+VqqoylUQ2+TbkfeadqparO1yQ/zdqlWTSlWQE108dzvgZ4SjeuxEsSpWk0pUkGjW+Kcmh5uj4qpUTUpfQV7p34+jWYNw1ERUTd7/rIsnKrnSVpDJvkbLynHpv4nYyotdDY/LempwKQNCS9UsZW65StdiTQ5Fp6VqEmu5Wto7O3E/e5VMqQIymTe8M3GoSONMLofknZVtlas0AbFvjKfghdBw4VGZQlL4DGLD+Eh7z90ryKGAiHtivnmoWw9UsEIDEq1UWUvFvIEkPbfCdbfIFa7CWixbqSIcWKJjzxF7rqgghVQQ+4J33BfOISNYRZHLwLkHhHBgE0WFJNeAEA5so4iQ5BYQBnKkJNfBPbchnXAgJePB3V5wlYNcAvKL/rDTYgkH0tIZqfVcOcg8ILYryiYg0hZKh3nsuGc6g0y+gPBIQEYC6enfdSuzQ5QyC0h0gegzAZkL7z7K6HYNmQSE5VzkbHCp4TdZLP+mPoPY6gLhQM7adoJdFitbqQfETpMlHChAJzpFO1WpBsROeBLnkKM4T9K+EERqM0h0HrmdKsvZgChSqvNIahVkZ7JTTjhQtHZ0wY9UpBKQyemyzB0ojY5dhVMp2LrFilqrcwGls/3+yNYVJGqtgNLx5L/WlrYKCK0VyswuJfSzPhxpCxu3WLRWqIitVrU2riA72svlcGNgS+3oLmQb2Sggr3RxaHcPElANB3YfS21g0wpS2Vtqoal2nm9yrNbaAWEwRxXZwP5Ru2sfhrLWkM5h7Ki4wa6Gt9e54MNaFaSlPaoHqqy9bhVZuYKwrIuaWKuKrFxBrHoIqL61qshKFYTqgZpZuYqsVEGoHqiZlavI0grCyhVqaqUqsrSCuHAcEA7U0EpVZJUWi/YKteTLe7z8cxaYHHNF9UBttZfdenphQFw4vhNQa97CDmnukM7SLprCDeufzRvW51aQnQ0O7AKqaNGwvqDF8u4JaIBFw3piQOzK7AznaJC5w3piQFryGc7RKKGUeMZhYkAChQcCGsSTl1gUbgSE9goNldhm3QgI7RWaKqnNuhEQ2is0lS//3s2PTXmliw7tFZrKLuzwk8vA9Mf865+gAwENtjuTAX/mF2wOotFmMzA7g3QENFtyi/VyssTFHaLQdNeWe/1P73hUD0C2kvspC1cB2ZF3RwDcrvqnrY6rgLj9DyoIoPF+yNfx++MTpuyq15dq/UcAxjz5+w/1t9/HFeS/2qV6AFNGuvzGHv3ozYEATPH3x2/tzc5UzwVgvGg1zkQ0pIf7AnAljBat/MkvOEARmLFvbzxWsIBktpLls4IFJPufgs/8lkKOvwIStKSOP4qWswBc52bztu+xggUksmz4IS0WkMiX/1ffvflKAG6wc9TXuk860DBtn01CIJknr00FARZwq1ichw4ksQUsqyAEBEhGiwUsQkCABQgIsAABARYgIMACFpCBACQZ2E46AQESuJ30AS0WsIDvU0GARG4nvU+LBSzgBwp+F4Ab3AzS920QEYAbXPH407VYXl8AbggnFYQZBEgW9G2ZtycAN/i2DzLSkAoCJNjVZW98h6kTXdi1eTlxCvhk8Ei3PhvvpLuU9AVgWt/ejAMyUvCbAFxxu+jj/cHoWCyfQR2YEkaLV9Et2IK+AFxxwehGj9JQIyoIMMVWsOxxHJAfdLsfMqgDY3YM1gPdHm9/XJ0P4jZFqCKAxsdgXS1aXQVkpPBXAbBjsLrx+1MVJKSCALqeBW/6N9hRByY76PEvZs9Jp4qg6a5l4FpAAumdgAabzcC1gHjR5gjQVJczGfBmP+GVLs497jqFBrL9j4f6/Pb0xxKuixXSZqGpurMfuBEQVz3eCmigUMHp7Me8pE9kuRdNk9RemcRLj4YKTwU0Szfpg4kBoc1C0yS1V8ab9z/QZqEp5rVXZu7V3QOFPwpogEDB3JXbuQHZ0+ULAQ0wWvBcnxuQ6ISRroB669oJg/N+c8kNdMJjATU2bziPeVqCYR11tWg4jy29BRvDOuoq0Ghph7Q0INGwzvV7UStWPUYadZd93tKA2LBOFUENLRzOYyvd5ZYqgroZ6uNKC1ArBYQqgjpx7dWbVaqHWfk+6VQR1MWq1cOsHBCqCOpgnephVg6IoYqgymzlap3qYdYKCFUEVWa75utUD7N0J33Wa523h2q958IOqJJVds2TrFVBjFURX8FTARWyyq55krUrSOxEF2fu4UBAyYXy3n6vz7/VBtauILFLDR+IgR0VMNLHjTuejQNiww4DO8ovPF53MJ+2cYsV40qMKKtNB/NpG1eQT/+I8IGAEnJ7Hne1pa0D8khfdD1aLZTOdq1VbOsWK+ZWtd67h46AgqXRWsW2riAxt6ply2isaqFogzRaq1hqAYnKGRd5QNFSaa1iqbVYsV/04YXbmHksIGc2Cz/UF0+UotQqSGxHl0fiXofImc0d0XMvVakHxI7VYh5BnqLD2O9GFztM+c/OyIk+HLg//kxA5sK7tt2gDKReQWLRP5ijfpGx8DircJjMAmIe6dYLLl+K7IzDcaQMZdZiTXObiG/cw3cC0nPqXoAPlbFMK0hsV0NbemNlC2np5REOk0tAbHXBhcR2NwkJttWLnku5yCUgJl7+DaW+gA3Ycq49h7JYzp3/d+bspc73d9Q64xwSrCPe60jzMJLV/t4CEBKso6hwmNxarGn2hY6YSbCaXlHhMIVUkJhdY+vSVRJxHgmSjQfyPGeOWYUGJMY+CRKc2vZAkeEwpQiIOdGHI/fPeSYghx3yVZUmIIaQwHk6OUSpHEoVEGNHAYfyXrPC1TiulQq/zfLAw02ULiCGZeDG6dkGYFErVYsUssy7jH2jWhp+w+WE6s9+xrZSVcZwmFJWkGluhcsOdLS5pC3Uia1OHZdp3khS+oAYWq7aKW1LNasSAYmxylV9WVx5JEuVCoihmlSTHU8VKnhQtlWqZSoXkBjVpDJs+fbHsmz8rauyATFWTVraex4qvC+UUddutFSFWWOeSgck9koXh+7hGW1XOVg7JY2ePtSXb1VxtQhIzNoutwv/HUEpzLid2tXli6IPMkxLrQJirO3aVetIHB2cp9oFI1a7gMQISi5qG4xYbQMSi4MSSndovVJT+2DEah+QWLR/ciCG+W00JhixxgRkmq16eZPW60BYRTfra+CWVSMDEpvso+w+CeTdo6rc0LhqkaTRAZkW3a7hsOGzysBTeOq+B2+bWC2SEJAETQqLXenSV/iOUCQjIEu4eaXjnjwHvnRPk8sTVf28FGuXeoH0zv3wu9/rFtcmW4CArMmqi5tZOp68O+71t1P2CjO5FrLXCxX+6ipFjyqxHgKypcnF73Y77hX5wJP/tevh9zUJTd6VxipD3wW3N1L4246C/lCjXpUPFCwDApKRODguMO2RfLcHY8Hx/xpOAmSv7ONHbxKkeWEahNHNUL3J42ByIGDw58g9Rh9zgRgOCEI2/g8FfBBQZi9BvgAAAABJRU5ErkJggg=="); }
     .colors__node span:nth-child(6) {
       background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAtHSURBVHgB7d1dehNHFsbxIwX7NuJ2QhKxAswKECuArCCdFWBWgFkBZAHzRKxgzAoQK0CswGKamdtxbvGHpk53tWlJ3VJL/V31/z2PLFkQcGy9nHOqulsDQS0uAhkfiYzMwxOJ738dmPulyNh+PrK/Nf143aW9qYV+MH/GYhk/9+XWPDafX16LzB9O734fKjQQlKJB+MGEYGhe+Oab+WgZB2Is+S/6umhANDALE5zP5vGM4JRHQPYUBjIx37QTc3uSCkNnDeLKMzdf60dzm/88lZmgMAKyw9cgCsHE3J7J93apz7SizM3tvbnNHkyjx8hBQDKEcZXQQDyXjleIsmyFmZm27B3VZRMBscLvoQik/1XiIIRlk9cBMQP26FjkhenNT8XTUOSxq2XnVyJ/mkF/IZ7yMiBhXC1eSTxbYLeoqvwylal4xpuAUC3K06pyI/La3Ga+VBXnA0IwqpfMKt9MWFwPirMBIRjNMC+gqctBcS4gBKMdrgbFmYAQjPbZ1mv601ReiyOcCMi/A3k+FHkjjm/q9UUyzLuw6tXrgNgjZv8Slms7yby4zk3b9bLPbddQeuo/gbwy4fgkhKOzTLv73PyMLvRnJT3VuwoSxpt8WjXGgt7QtstUk6d9qya9qiBfA3ljvtEfhHD0jp4o1sdq0osKYmeNf0l8uDl6rk/VpPMV5L+BvLCzBuFwhK0mn0xHcCod19kKovsaR/EBhZ3/JqKUt1fxBmMnTw3uZEBoqfzS5Zarcy1WaFapaKn8oi3XsVl8CYPuLdl3KiA6b9hVKg4V8cwyvirMh66tcnUmIPqNuTX9qMBrJihnXQpJ6zOIPcjwzTI+FxxITB9M5Q9pWasBsStV2lIxbyDL/Coe3ltb4WqtxbIrVYQD25zoa0RfK9KSVipIKhxjAXZocxm48YAQDhyirZA0GhDCgTLaCEljAWEgR0UaHdwbG9IJByqSDO6NbCY3EhCz8aMnOBEOVEVD8kYaUHtAdFeUTUDUIGhix73WGcSG40yA+rw0O+61HaJUW0DC+NzxDwLUzPwj/LSut2uoJSAs56Jhl2Zl63Edy7+VB8Qu5+r5HGMBmlPL8m/lQ7o9TXYsQLNO7GuvUpUGRE94Es4hR3tOq74QRGUtlp07tLXibEC0qdJ5pLIKcsSpsuiGkb3gRyUqCYjdsBkL0A0nehVOqUDpFsu2VhcCdEwV+yOlK8gRm4HoqGF8kfOyf8bhaK3QZXopoTAod6jTwS0WrRV6otSq1sEV5Lihw42BkkZHJVqtgwJiVggCffcgAfphou9jKQc4tIL09i214KcfTMdzyFmIeweEwRx9pAP7vQMOg9prSOcwdvScDuwP9znid68KcsyRuui30b5VpHAFYVkXjtirihSuIMcM5nDDXlWkUAWhesAxhatIoQpC9YBjCleRnRWElSs4qlAV2VlBTDgmQjjgnkJVpEiLRXsFJ5n26cWu37M1IHrMlVA94K5RuOOtp3dVkN8FcNhgR4eUO6SztAtfmGH9ft6wnltB7nF9K3hi22s9NyCmtDwTwAPbhvXMgIQBS7vwSu6wPsx5kuEcvsk84zAzIEvZvvQFuGaQUxQ2AhLSXsFPmW3WMOMJ2iv4aqPN2ggI7RV8NcxYuV0JyNcgeqvmsQAe0gs72AzcWa8gEwH8Nkl/sh4QNgfhu5UMrAfkRAC/ZbdYYbzExTtEwXcry713ARlQPYBIOgvpgDwRACtbHcPUk1QQQKJQPEoeRydM6VWvj0T+JwAiwx9k/I9/ypeogtyjegArrm/ksd4nLdZEANwZ2iNKhvbDIwFwZ2AzEQVkyfFXwIpk0SppscYCIG2sHwasYAHZdCVryAoWkO32Ru4Plxx/BeQ5GQ6ZP4A8oyErWEA2zQYtFpDDdFc/aov1qwDYEFUQAZBnpAEZC4ANAxsQADk0IAzpQIalrSAEBMhGiwVsQ0CALQgIsAUBAbYgIMAWGpBLAZDlkoAAOQY2IAByUEGAHGYnfUFAgC2GtyJfBMCGgVaQARUEyGSKx98akIUA2DBgBgHy3dqAzAXAhmgf5IoKAmS6NsUjeoepr0F0bV5OnAK+u3wwlfvJTvpCAKQt9EMUEDOMfBYAd5Z2fzB5hykGdWBVlImkgiwEQNpMP0QBuaGCACuu0xXk4TSqIAsBEO2gm0xE2x/D1JNUEUBWF63uAmKm9o8CQIvFLHmcDggVBJDVLAzSv8COOhDvoCefrJ+TThWB71YysB6Q9wL4bSUD6wGZCeC3WfqTwfqvmjnkQnjXKXhI9z9+msrD9HMb18Va0mbBX7P1J7IuHHcugIfMBuG79ecGWb+R5V74Jqu9UpmXHl1mJAlw3Czrybxr89JmwSu3OUVhkPcf0GbBF3ntlcq9urtps/4UwAO3W1ZucwNyLfJWAA9se63nBsSeMDITwG0ze8Jgpq1voGParNcCOOx2x4rtQHZgWIertg3niZ1vwcawDlfdFOiQdgbEDjBcvxdO0epxU2DG3hkQHdapInDQ1uE8UehdbqkicM23ggtQhQJCFYFLTHs1LVI9VOH3SaeKwBXf9ti+KBwQqghcsE/1UIUDoqgi6DNdufq25+b3XgGhiqDPdNd8n+qhdu6kr7sIZHQk8km4sAN6pMiueZa9KojSKmKS+FKAHrk58LjCvStI4msgH8zdRICOMy/yc1M9fpMD7F1BElcifwgDO3rgW4mO5+CA6LDDwI6u01M29h3M0w5usRJciRFddehgnnZwBUks41YL6BzTWj2VkkoH5OepzGi10DVlW6tE6RYrYVot3Rs5EaBlVbRWidIVJGFWtXQZjVUttO2yitYqUVlAbDnjIg9oWyWtVaKygKgHU3nLPIK26GtPX4NSoUoDoq5FzoT3OkTDdO6wr72q/9zqXQQytgc0crkg1M4exv60ytYqUXkFUXaX/aBjX4B93Zq9uDrCoWoJiNL9EeGoX9RM9zvsa60WtQVE2aGdlS3UwobjTGpUywyyzmwiTs3d7wJU5535BziQmtVaQRJmE/FUWNlCdeZNhEM1EhA9C/Eq3t0kJChrflXhTvkujQRE2ZDoytZCgAPocq6+hux71zT1dzbL7pHo6bpjAQqqc69jx9/bPEKCfbQVDtVYi5Wm/6PMJCho3lY4VCsVJGGvsaWVhPNIkCUayJucOda1GpAE+yTI8E63B9oMh+pEQFQYyJn5Yl4JvNfEDnlRnQmICgkJRF5WfU5HGZ0KiAoDmZgv6i9hhcs3emH03+o88PAQnQuIYhnYO3O7AbiQjmllmXcXuwz8mNN33ac/46sWl3F36WQFSTMrXHqgo84lnJ3oFl2det2leSNL5wOiaLmc09mWal0vApIIWeXqPW2pzCB+Kj3Rq4Aoqkk/6fFUeu5411apduldQBIh1aQvLm3VOJMe6m1AlFaTY5E35gfwXNBFs6sarzjShF4HJGFWugKJq8lY0Dptp27MjvgvUzmXnnMiIIkwbrv0oMexoA1RO3Ut8rbtgwyr4lRAlB3iz4Sjg5vkXDASzgUkQVAa4WwwEs4GJJEKyhOh9aqK88FIOB+QhA3KRBjmy/AmGAlvApJmV7209ZoIipjVfQ3crvIyIAmtKvdETs034ZlQVdZ5Vy2yeB2QtDA+USsQv2cVDcU7c3/uY7XIQkAyhH6FRd/L5b0QikwEZAczr+gliSYSt2H6uO/npWi7pNcj01DMHky5Ntk2BGRPYVxdTsztyTIOzFi6bWG+1rn5Wj+a25wqsR8CUpJe/O5eHJTJUOTRMg6M3pquNFoZkjB8vo2Ph5r3+UDBLiAgNUmCY16sIxOcsQbH3P+4/F5xkvuR5Ifp0t7uHtvzKv4exFfJj9qlK3NPEOrxf5gqWg8iOod7AAAAAElFTkSuQmCC"); }
+
+.box__wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50vh;
+  height: 50vh;
+  -webkit-perspective: 100rem;
+  perspective: 100rem;
+  -webkit-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%; }
+
+.box__cube {
+  width: 30rem;
+  height: 30rem;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateY(50deg) rotateZ(-50deg);
+  transform: rotateY(50deg) rotateZ(-50deg);
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center; }
+  .box__cube__side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    font-size: 25px;
+    color: transparent;
+    text-align: center;
+    -webkit-transition: 0.1s ease-in 0.1s;
+    -o-transition: 0.1s ease-in 0.1s;
+    transition: 0.1s ease-in 0.1s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
+    .box__cube__side > div {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      border: 2px solid #F2EEA7;
+      background: rgba(253, 136, 83, 0.5);
+      -webkit-transition: inherit;
+      -o-transition: inherit;
+      transition: inherit; }
+    .box__cube__side .layer-1 {
+      width: 80%;
+      height: 80%;
+      z-index: 2;
+      -webkit-transform-origin: -150% -150%;
+      -ms-transform-origin: -150% -150%;
+      transform-origin: -150% -150%;
+      background: rgba(174, 233, 205, 0.5);
+      border-color: #FFFFFF;
+      border-radius: 5%;
+      opacity: 0; }
+    .box__cube__side .layer-2 {
+      background: rgba(52, 169, 151, 0.75);
+      border-color: #AEE9CD;
+      -webkit-transform-origin: -150% -150%;
+      -ms-transform-origin: -150% -150%;
+      transform-origin: -150% -150%; }
+    .box__cube__side:hover .layer-1 {
+      opacity: 1;
+      -webkit-transform: scale3d(0.75, 0.75, 5) translateZ(2rem);
+      transform: scale3d(0.75, 0.75, 5) translateZ(2rem); }
+      .box__cube__side:hover .layer-1:active {
+        -webkit-transform: scale3d(0.75, 0.75, 5) translateZ(1.8rem);
+        transform: scale3d(0.75, 0.75, 5) translateZ(1.8rem);
+        -webkit-box-shadow: 0 0 100rem #D4DCCD;
+        box-shadow: 0 0 100rem #D4DCCD;
+        border-color: #FFFFFF;
+        background: rgba(212, 220, 205, 0.8);
+        -webkit-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s; }
+    .box__cube__side:hover .layer-2 {
+      -webkit-transform: scale3d(0.75, 0.75, 2) translateZ(2rem);
+      transform: scale3d(0.75, 0.75, 2) translateZ(2rem);
+      -webkit-transition: 0.1s ease-out 0.1s;
+      -o-transition: 0.1s ease-out 0.1s;
+      transition: 0.1s ease-out 0.1s;
+      border-radius: 5%; }
+      .box__cube__side:hover .layer-2:active {
+        -webkit-transform: scale3d(0.75, 0.75, 2) translateZ(1.5rem);
+        transform: scale3d(0.75, 0.75, 2) translateZ(1.5rem);
+        -webkit-box-shadow: 0 0 100rem #34A997;
+        box-shadow: 0 0 100rem #34A997;
+        border-color: #FFFFFF;
+        background: rgba(174, 233, 205, 0.8);
+        -webkit-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s; }
+    .box__cube__side:hover .layer-3 {
+      border-radius: 5%;
+      -webkit-box-shadow: 0 0 100rem #FD8853;
+      box-shadow: 0 0 100rem #FD8853;
+      border-color: #FD8853; }
+      .box__cube__side:hover .layer-3:active {
+        -webkit-box-shadow: 0 0 100rem #F2EEA7;
+        box-shadow: 0 0 100rem #F2EEA7;
+        border-color: #FFFFFF;
+        background: rgba(242, 238, 167, 0.8);
+        -webkit-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s; }
+    .box__cube__side.front {
+      -webkit-transform: translate3d(0, 0, 15rem);
+      transform: translate3d(0, 0, 15rem); }
+      .box__cube__side.front:hover {
+        -webkit-transform: translate3d(0, 0, 16.1rem);
+        transform: translate3d(0, 0, 16.1rem); }
+    .box__cube__side.back {
+      pointer-events: none;
+      -webkit-transform: translate3d(0, 0, -15rem);
+      transform: translate3d(0, 0, -15rem); }
+    .box__cube__side.left {
+      -webkit-transform: translate3d(-15rem, 0, 0) rotateY(-90deg);
+      transform: translate3d(-15rem, 0, 0) rotateY(-90deg); }
+      .box__cube__side.left:hover {
+        -webkit-transform: translate3d(-16.1rem, 0, 0) rotateY(-90deg);
+        transform: translate3d(-16.1rem, 0, 0) rotateY(-90deg); }
+    .box__cube__side.right {
+      pointer-events: none;
+      -webkit-transform: translate3d(15rem, 0, 0) rotateY(90deg);
+      transform: translate3d(15rem, 0, 0) rotateY(90deg); }
+    .box__cube__side.top {
+      -webkit-transform: translate3d(0, -15rem, 0) rotateX(90deg);
+      transform: translate3d(0, -15rem, 0) rotateX(90deg); }
+      .box__cube__side.top:hover {
+        -webkit-transform: translate3d(0, -16.1rem, 0) rotateX(90deg);
+        transform: translate3d(0, -16.1rem, 0) rotateX(90deg); }
+    .box__cube__side.bottom {
+      pointer-events: none;
+      -webkit-transform: translate3d(0, 15rem, 0) rotateX(-90deg);
+      transform: translate3d(0, 15rem, 0) rotateX(-90deg); }
 
 .nav__wrapper {
   position: fixed;

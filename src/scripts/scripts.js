@@ -137,7 +137,7 @@ function colorsInit() {
     const section = document.querySelector('.colors__wrapper')
     const spanCollection = document.querySelectorAll('span')
 
-    section.addEventListener('mousemove', function(event) {
+    section?.addEventListener('mousemove', function(event) {
         const x = event.pageX;
         const y = event.pageY;
 
