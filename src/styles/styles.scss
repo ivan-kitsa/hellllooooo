@@ -309,22 +309,24 @@ body, main {
     display: flex;
     cursor: default;
 
-    &:hover > span {
-      &:hover {
-        transform: scale(1.5);
-        transition: transform .15s ease-out;
-      }
+    //&:hover > span {
+    //  &:hover {
+    //    transform: scale(1.5);
+    //    transition: transform .15s ease-out;
+    //  }
+    //
+    //  &:before {
+    //    text-shadow: 0 0 0.5vw rgba(250, 250, 250, 0.15);
+    //    transition: .15s ease-out;
+    //  }
+    //}
 
-      &:before {
-        text-shadow: 0 0 0.5vw rgba(250, 250, 250, 0.15);
-        transition: .15s ease-out;
-      }
+    &:hover > span:before {
+      text-shadow: 0 0 28px rgba(250, 250, 250, 0.15);
+      transition: .2s ease-in;
     }
 
     span{
-      transform: scale(1);
-      transition: transform .15s ease-in .1s;
-
       &:before{
         content: attr(data-text);
         position: absolute;
@@ -403,8 +405,8 @@ body, main {
 
     &__side {
       $hoverOffset: 1.1rem;
-      $transitionIn: .1s ease-in;
-      $transitionOut: .1s ease-out;
+      $transitionIn: .3s cubic-bezier(.37,.18,.17,.93);
+      $transitionOut: .3s cubic-bezier(.37,.18,.87,.31);
 
       @include flexCenter;
       position: absolute;
@@ -414,7 +416,7 @@ body, main {
       color: transparent;
       text-align: center;
 
-      transition: $transitionIn .1s;
+      transition: $transitionOut .15s;
       transform-style: preserve-3d;
 
 
@@ -458,7 +460,6 @@ body, main {
         }
         .layer-2 {
           transform: scale3d(.75, .75, 2) translateZ(2rem);
-          transition: $transitionOut .1s;
           border-radius: 5%;
 
           &:active {
@@ -488,6 +489,7 @@ body, main {
 
         &:hover {
           transform: translate3d(0, 0, $cubeSizeHalf + $hoverOffset) ;
+          transition: $transitionIn;
         }
       }
 
@@ -501,6 +503,7 @@ body, main {
 
         &:hover {
           transform: translate3d(-$cubeSizeHalf - $hoverOffset, 0, 0) rotateY(-90deg);
+          transition: $transitionIn;
         }
       }
 
@@ -514,6 +517,7 @@ body, main {
 
         &:hover {
           transform: translate3d(0, -$cubeSizeHalf - $hoverOffset, 0) rotateX(90deg);
+          transition: $transitionIn;
         }
       }
 
