@@ -6,7 +6,8 @@ function generatorNodes() {
     }
 
     for (let i = 0; i < 50; i++) {
-        const node = document.createElement('div')
+        const node = document.createElement('a')
+        node.href = './box.html'
         node.className = 'waterflow__block'
         wrapper.appendChild(node)
     }
